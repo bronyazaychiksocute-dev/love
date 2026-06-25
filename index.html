@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>วันนี้เป็นยังไงบ้าง? 🌸</title>
+  <meta name="description" content="เว็บให้กำลังใจ ถามไถ่ความรู้สึก และปลอบใจคุณในทุกวัน" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating particles background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Main App -->
+  <div class="app-container" id="app">
+
+    <!-- Intro Screen -->
+    <div class="screen active" id="screen-intro">
+      <div class="intro-content">
+        <div class="floating-emoji">🌸</div>
+        <h1 class="intro-title">สวัสดี&thinsp;💕</h1>
+        <p class="intro-subtitle">มีคนอยากรู้ว่า<br>วันนี้คุณเป็นยังไงบ้าง</p>
+        <p class="intro-desc">ขอเวลาแป๊บนึงนะคะ<br>มาคุยกันเรื่องความรู้สึกของคุณ 🫶</p>
+        <button class="btn-start" id="btn-start" onclick="startQuiz()">เริ่มเลย ✨</button>
+      </div>
+    </div>
+
+    <!-- Question Screens (Q1–Q10) -->
+    <div class="screen" id="screen-q">
+      <!-- Progress bar -->
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <div class="question-card" id="question-card">
+        <div class="q-emoji" id="q-emoji">😊</div>
+        <h2 class="q-text" id="q-text">คำถาม</h2>
+        <div class="choices" id="choices"></div>
+      </div>
+    </div>
+
+    <!-- Comfort Screen (shown when user picks sad/negative answer) -->
+    <div class="screen" id="screen-comfort">
+      <div class="comfort-card" id="comfort-card">
+        <div class="comfort-emoji" id="comfort-emoji">🤗</div>
+        <h2 class="comfort-title" id="comfort-title">ไม่เป็นไรนะ</h2>
+        <p class="comfort-text" id="comfort-text"></p>
+        <button class="btn-next" onclick="continueNext()">ขอบคุณ อ่านแล้วค่ะ 🌷</button>
+      </div>
+    </div>
+
+    <!-- Final Screen -->
+    <div class="screen" id="screen-final">
+      <div class="final-card">
+        <div class="stars-wrap" id="stars-wrap"></div>
+        <div class="final-emoji">🌟</div>
+        <h2 class="final-title">ขอบคุณที่ไว้ใจเล่าให้ฟังนะคะ</h2>
+        <p class="final-text" id="final-text"></p>
+        <div class="final-quote" id="final-quote"></div>
+        <button class="btn-restart" onclick="restartQuiz()">เริ่มใหม่อีกครั้ง 🔄</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
